@@ -1,0 +1,45 @@
+<h1>Hey you made it!</h1>
+
+Click on one of the following practice scenarios to get started
+
+<div class="container">
+  <% @scenarios.each do |scenario| %>
+    <% if scenario.directions.any? %>
+      <% if user_signed_in? %>
+        <%= link_to(scenario.top.completed(current_user) ?
+              editor_edit_path(id:scenario.top.user_entry(current_user),
+              direction_id:scenario.top) : editor_new_path(direction_id:scenario.top)) do %>
+          <div class="scenario-listing">
+            <div class="img"><%= image_set(1+rand(4))%></div>
+            <h2>
+              <%= scenario.title %>
+              <span> -
+                <%= "directions(#{scenario.directions.count})"%>
+                <% if user_signed_in? %>
+                  <%= " | Completed!" if scenario.finished(current_user) %>
+                <% end %>
+              </span>
+            </h2>
+            <div class="description"><%= scenario.description %></div>
+          </div>
+        <% end %>
+      <% else %>
+        <%= link_to new_user_session_path do%>
+          <div class="scenario-listing">
+            <div class="img"><%= image_set(1+rand(4))%></div>
+            <h2>
+              <%= scenario.title %>
+              <span> -
+                <%= "lessons(#{scenario.directions.count})"%>
+                <% if user_signed_in? %>
+                  <%= " | Completed!" if scenario.finished(current_user) %>
+                <% end %>
+              </span>
+            </h2>
+            <div class="description"><%= scenario.description %></div>
+          </div>
+        <% end %>
+      <% end %><!-- user signed in? -->
+    <% end %><!-- list scenarios with directions -->
+  <% end %><!-- collection of scenarios to list -->
+</div>

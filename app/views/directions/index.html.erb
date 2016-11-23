@@ -1,0 +1,27 @@
+<h1>Listing Directions</h1>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th> <th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @directions.each do |direction| %>
+      <tr>
+        <td><%= direction.title %></td>
+        <td><%= direction.scenario ? direction.scenario.title : "Crap!" %></td>
+        <td><%= link_to "Complete Direction", direction.completed(current_user) ? editor_edit_path(id:direction.user_entry(current_user).id, direction_id:direction) : editor_new_path(direction_id:direction) %> </td>
+        <td><%= link_to 'Show', direction %></td>
+        <td><%= link_to 'Edit', edit_direction_path(direction) %></td>
+        <td><%= link_to 'Destroy', direction, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+<%= link_to 'New Lesson', params[:scenario_id] ? new_scenario_direction_path(params[:scenario_id]) : new_direction_path %>

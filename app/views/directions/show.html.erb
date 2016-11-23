@@ -1,0 +1,16 @@
+<h1>
+  <%= @direction.title %>
+</h1>
+<p>The scenario id is <%= @direction.scenario_id %></p>
+<div class="row">
+  <div class="col-md-6">
+    <%= raw(@direction.body) %>
+    <p></p>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-6">
+      <%= link_to 'Edit', edit_direction_path(@direction) %> |
+      <%= link_to 'Back', scenario_directions_path(@direction.scenario_id) %>
+  </div>
+</div>

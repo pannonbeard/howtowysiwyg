@@ -1,0 +1,25 @@
+<div class="col-md-6">
+<%= simple_form_for(@direction) do |f| %>
+  <%= f.error_notification %>
+  <%= f.association :scenario, prompt: "Select a Scenario" %>
+  <div class="form-inputs">
+    <%= f.input :title, input_html: {  id:"myTitle" } %>
+    <%= f.input :information, placeholder: "Add a brief description of this direction" %>
+    <p>
+      <%= f.input :body, as: :hidden, input_html: { id:"myTextArea" } %>
+      <trix-editor input="myTextArea" name="richTextField" id="richTextField" class="trix-content" ></trix-editor>
+    </p>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>
+</div>
+<div class="col-md-2">
+  <div id="directions">
+    <strong><h4 id="title"></h4></strong>
+    <hr>
+    <div id="richbody"></div>
+  </div>
+</div>

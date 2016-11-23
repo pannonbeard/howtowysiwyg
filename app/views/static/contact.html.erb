@@ -1,0 +1,23 @@
+<main class="cd-main-content">
+  <h1>Static#contact</h1>
+  <p>Find me in app/views/static/contact.html.erb</p>
+  <a href="#" class="cd-btn"></a>
+</main>
+
+<div class="cd-panel from-left">
+
+	<header class="cd-panel-header">
+		<h1>Lessons To Do </h1>
+    <a href="#0" class="cd-panel-close"></a>
+	</header>
+
+	<div class="cd-panel-container">
+		<div class="cd-panel-content">
+      <p>Hello there epluriabus numna</p>
+      <% @directions.each do |direction| %>
+      <p><%= direction.title %></p>
+      <% end %>
+			<!-- your side content here -->
+		</div> <!-- cd-panel-content -->
+	</div> <!-- cd-panel-container -->
+</div> <!-- cd-panel -->

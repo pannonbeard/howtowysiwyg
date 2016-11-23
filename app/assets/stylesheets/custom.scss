@@ -1,0 +1,171 @@
+h3, h4{
+  margin-top:10px;
+  margin-bottom:5px;
+  color:#ee7703;
+}
+
+.container-wide{
+  width:100%;
+  margin:auto;
+  padding:5;
+}
+
+.row-center{
+  padding-left:50px;
+  padding-right:25px;
+  padding-top:10px;
+  width:100%;
+}
+/* these are very specific need to find better way to do this*/
+.col-md-5{
+  padding-left:10px !important;
+  padding-right:10px !important;
+}
+
+.col-md-2{
+  padding-left:10px !important;
+  padding-right:10px !important;
+}
+
+/* heading customs */
+#header{
+  position:fixed;
+  width:100%;
+  background:#312c32;
+  color:white;
+  margin:auto;
+  padding-left:20px;
+  padding-right:50px;
+  z-index:99;
+  h1{
+    float:left;
+    margin-top:5px;
+  }
+  .btn{
+    padding-top:15px;
+  }
+  .nav {
+    .btn{
+     border-radius:0;
+     color:white;
+     &:hover{
+       background-color:white;
+       color:black;
+       height:54px;
+      }
+    }
+  }
+}
+.header-spacer{
+  height:50px;
+  width:100%;
+  margin-bottom:10px;
+}
+.brand{
+  height:35px;
+}
+.banner{
+  background:#1D1753;
+  border-bottom: 3px solid #ee7703;
+  height:35px;
+}
+/* listings */
+.scenario-listing{
+  background-color:#98dafc;
+  min-height:90px;
+  margin:50px 0 10px 0;
+  width:100%;
+  padding:10px 0 0 10px;
+  color:black;
+  border-radius:3px;
+  overflow:hidden;
+  .img{
+    color:#312c32;
+    position:absolute;
+    height:100px;
+    margin: -10px 10px 0 -10px;
+    width:100px;
+    float:left;
+    border-radius:3px;
+    -webkit-transition: all .5s ease;
+    transition: all .5s ease;
+    z-index:99;
+    font-size:75px;
+    text-align:center;
+  }
+  &:hover .img{
+    background-color:#312c32;
+    color:#feffff;
+    position:absolute;
+    height:125px;
+    width:125px;
+    margin:-50px 0 0 -35px;
+    box-shadow:0 0 10px gray;
+    -webkit-transition: all .5s ease;
+    transition: all .5s ease;
+    border:none;
+    padding-top:10px;
+  }
+  h2{
+   float:left;
+   margin:2px 0 10px 100px;
+   width:700px;
+   span{
+     padding-top:20px;
+     font-size: 15px;
+   }
+ }
+ .description{
+   margin: 0 0 0 -10px;
+   padding:5px 0 5px 110px;
+   float:left;
+   background-color:#daad86;
+   width:101%;
+   min-height:40px;
+ }
+ a{
+   color:#312c32;
+   &:hover{
+     text-decoration:none;
+     background-color:transparent;
+     color:#feffff;
+   }
+ }
+ .delete{
+   position:relative;
+   float:right;
+   font-size:20px;
+   top:-5px;
+   right:10px;
+ }
+}
+
+.admin-listings{
+  background-color:#daad86;
+  border-radius:5px;
+
+  a{
+    display:block;
+    color:black;
+    width:100%;
+    text-decoration:none;
+    height:40px;
+    padding:10px;
+    text-align:center;
+    &:hover{
+      text-decoration:none;
+    }
+  }
+  &:hover{
+    background-color:#98dafc;
+  }
+}
+
+.imgleft{
+  float:left;
+  margin:0 10px 10px 0;
+}
+.imgright{
+  float:right;
+  margin:0 0 10px 10px;
+}

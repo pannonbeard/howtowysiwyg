@@ -1,0 +1,27 @@
+<div class="cd-panel from-left">
+
+	<header class="cd-panel-header">
+		<h1>To Do</h1>
+    <a href="#0" class="cd-panel-close"></a>
+	</header>
+
+	<div class="cd-panel-container">
+		<div class="cd-panel-content">
+      <% @directions.each do |direction| %>
+				<%= link_to(direction.completed(current_user) ?
+					editor_edit_path(id:direction.user_entry(current_user).id, direction_id:direction) : 
+					editor_new_path(direction_id:direction)) do %>
+	      	<div class="cd-panel-directions">
+						<%= direction.title %>
+						<% if direction.completed(current_user) %>
+							<i class="fa fa-check-square-o" style="color:#76EE00; float:right; margin-top:5px;"></i>
+						<% else %>
+							<i class="fa fa-square-o" style="float:right; margin-right:2px; margin-top:5px;"></i>
+						<% end %>
+					</div>
+				<% end %>
+      <% end %>
+			<!-- your side content here -->
+		</div> <!-- cd-panel-content -->
+	</div> <!-- cd-panel-container -->
+</div> <!-- cd-panel -->

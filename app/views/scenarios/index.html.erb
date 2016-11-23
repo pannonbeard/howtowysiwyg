@@ -1,0 +1,23 @@
+<h1>Listing Scenarios</h1>
+<%= link_to 'New Scenario', new_scenario_path %>
+<div class="container">
+<% @scenarios.each do |scenario| %>
+  <div class="scenario-listing">
+    <div class="img"><%= image_set(1+rand(4))%></div>
+    <h2>
+      <%= link_to scenario.title, scenario %>
+      <span> -
+        <%= link_to 'Edit', edit_scenario_path(scenario), class:"btn" %>
+        <%= link_to "lessons(#{scenario.directions.count})", scenario_directions_path(scenario), class:"btn"%>
+      </span>
+
+    </h2>
+    <%= link_to raw("<i class=\"fa fa-times-circle\"></i>"), scenario, method: :delete, data: { confirm: 'Are you sure?' }, class:"delete" %>
+    <div class="description"><%= scenario.description %></div>
+  </div>
+<% end %>
+
+<br>
+
+
+</div>

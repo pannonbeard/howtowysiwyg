@@ -1,0 +1,23 @@
+<div id="image-pop">
+  <h4>Image Properties</h4>
+  <form name = "imageinfo" method="POST">
+    <p>URL<input type="text" name="url" id="imgsrc" class="form-control"/></p>
+    <p>Alternative Text<input type="text" name="alt" id="imgalt" class="form-control"/></p>
+    <p>Height<input type="text" name="height" id="imgheight"  class="form-control"/></p>
+  <!--<p>Border<input type="text" name="border" id="imgborder" class="form-control"/></p>
+    <p>HSpace<input type="text" name="hspace" id="imghspace" class="form-control"/></p>
+    <p>Vspace<input type="text" name="vspace" id="imgvspace" class="form-control"/></p>-->
+    <p>Alignment
+      <select id="alignment" class="form-control">
+        <option val="none">not set</option>
+        <option val="right">right</option>
+        <option val="left">left</option>
+      </select>
+    </p>
+    <p>&nbsp;</p>
+    <p>
+      <input type="button" name="submit" value="add image" id="newimage" class="btn btn-default"/>
+      <input type="button" name="submit" value="close" id="closeimage" class="btn btn-default right"/>
+    </p>
+  </form>
+</div>
