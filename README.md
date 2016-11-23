@@ -1,28 +1,21 @@
-== README
+# How to Wysiwyg
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Inside of this application is my home spun version of a wysiwyg.
 
-Things you may want to cover:
+This is built using a mix of Devise to add users, cancancan to denote user privileges,
+postgres as a db to keep track of everything, simple_form to make forms easier to
+work with.
 
-* Ruby version
+## Getting started
 
-* System dependencies
+Start with a ```bundle install``` to get everything up and going.
 
-* Configuration
+You will need to add in a secrets.yml file and a database.yml file.
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+You can then personalize the different abilities and user permissions.
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+## Eventuallies
+
+At some point the JS for the wysiwyg editor will be pulled out to be it's own implantable
+item.
